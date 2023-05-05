@@ -7,7 +7,7 @@ using Calc.Utils;
 
 namespace Calc
 {
-    //asdasdartbrt
+    
     //Дима не смотри сюда тебе тут не рады
     /// <summary>
     /// Interaction logic for MainWindow.xaml

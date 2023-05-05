@@ -119,5 +119,35 @@ namespace Calc
             //This will prevent other buttons focus firing its click event on <ENTER> while typing
             btnEquals.Focus();
         }
+        private void btnEquals_Click(object sender, RoutedEventArgs e)
+        {
+            if (CurrentOperation == null)
+                return;
+
+            if (txtInput.Text == "")
+                return;
+
+            //SecondValue is used for multiple clicks on Equals bringing the newest result of last operation
+            decimal val2 = SecondValue ?? Convert.ToDecimal(txtInput.Text);
+            try
+            {
+                txtInput.Text = (FirstValue = CurrentOperation.DoOperation(FirstValue, (decimal)(SecondValue = val2))).ToString();
+            }
+            catch(DivideByZeroException)
+            {
+                MessageBox.Show("Can't divide by zero", "Divided by zero", MessageBoxButton.OK, MessageBoxImage.Error);
+                btnClearAll.PerformClick();
+            }
+        }
+
+        private void btnClearEntry_Click(object sender, RoutedEventArgs e)
+            => txtInput.Text = "0";
+
+        private void btnClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            FirstValue = 0;
+            CurrentOperation = null;
+            txtInput.Text = "0";
+        }
     }
 }

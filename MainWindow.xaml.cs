@@ -17,5 +17,24 @@ namespace Calc
         {
             InitializeComponent();
         }
+        private void regularButtonClick(object sender, RoutedEventArgs e)
+            => SendToInput(((Button)sender).Content.ToString());
+        
+        private void SendToInput(string content)
+        {
+            //Prevent 0 from appearing on the left of new numbers
+            if (txtInput.Text == "0")
+                txtInput.Text = "";
+
+            txtInput.Text = $"{txtInput.Text}{content}";
+        }
+
+        private void btnPoint_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtInput.Text.Contains(this.DecimalSeparator))
+                return;
+
+            regularButtonClick(sender, e);
+        }
     }
 }

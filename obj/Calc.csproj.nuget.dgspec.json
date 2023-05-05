@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ssq\\Desktop\\Calc — копия\\Calc.csproj": {}
+    "C:\\Users\\ssq\\Desktop\\Calcu\\Calc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ssq\\Desktop\\Calc — копия\\Calc.csproj": {
+    "C:\\Users\\ssq\\Desktop\\Calcu\\Calc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ssq\\Desktop\\Calc — копия\\Calc.csproj",
+        "projectUniqueName": "C:\\Users\\ssq\\Desktop\\Calcu\\Calc.csproj",
         "projectName": "Calc",
-        "projectPath": "C:\\Users\\ssq\\Desktop\\Calc — копия\\Calc.csproj",
+        "projectPath": "C:\\Users\\ssq\\Desktop\\Calcu\\Calc.csproj",
         "packagesPath": "C:\\Users\\ssq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ssq\\Desktop\\Calc — копия\\obj\\",
+        "outputPath": "C:\\Users\\ssq\\Desktop\\Calcu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
